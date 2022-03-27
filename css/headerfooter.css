@@ -1,3 +1,4 @@
+/* header */
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 *{
   margin: 0;
@@ -25,6 +26,7 @@ nav .logo{
   line-height: 70px;
   padding-left: 60px;
 }
+
 nav ul{
   float: right;
   margin-right: 40px;
@@ -45,10 +47,10 @@ nav ul li a{
   padding: 8px 15px;
 }
 nav ul li a:hover{
-  color: cyan;
+  color: rgba(137,132,232,255);
   border-radius: 5px;
-  box-shadow:  0 0 5px #33ffff,
-               0 0 10px #66ffff;
+  box-shadow:  0 0 5px rgba(137,132,232,255),
+               0 0 10px rgba(137,132,232,255);
 }
 nav ul ul li a:hover{
   box-shadow: none;
@@ -56,7 +58,7 @@ nav ul ul li a:hover{
 nav ul ul{
   position: absolute;
   top: 90px;
-  border-top: 3px solid cyan;
+  border-top: 3px solid rgba(137,132,232,255);
   opacity: 0;
   visibility: hidden;
   transition: top .3s;
@@ -120,17 +122,7 @@ nav ul ul ul li{
     cursor: pointer;
   }
   .show:hover{
-    color: cyan;
-  }
-  .icon{
-    display: block;
-    color: white;
-    position: absolute;
-    top: 0;
-    right: 40px;
-    line-height: 70px;
-    cursor: pointer;
-    font-size: 25px;
+    color: rgba(137,132,232,255);
   }
   nav ul ul{
     top: 70px;
@@ -271,7 +263,7 @@ footer {
 }
 
 .footer-distributed .footer-company-name {
-    color: #8f9296;
+    color: rgba(137,132,232,255);
     font-size: 14px;
     font-weight: normal;
     margin: 0;
@@ -329,7 +321,7 @@ footer {
 
 .footer-distributed .footer-company-about {
     line-height: 20px;
-    color: #92999f;
+    color: rgba(137,132,232,255);
     font-size: 13px;
     font-weight: normal;
     margin: 0;
@@ -363,11 +355,11 @@ footer {
 }
 
 .footer-distributed .footer-icons a:hover {
-    background-color: #3F71EA;
+    background-color: rgba(137,132,232,255);
 }
 
 .footer-links a:hover {
-    color: #3F71EA;
+    color: rgba(137,132,232,255);
 }
 
 @media (max-width: 880px) {

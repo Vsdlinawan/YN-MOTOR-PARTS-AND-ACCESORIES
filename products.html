@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <title>YN MOTOR PARTS AND ACCESORIES</title>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" id = "override-css">
+
+      
+
+
     <style>
       * {
         margin: 0;
@@ -48,8 +54,8 @@
       section {
         position: relative;
         width: 100%;
-        min-height: 0;
-        padding: 4.5em;
+        min-height: 100vh;
+        padding: 100px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -60,7 +66,7 @@
   </head>
   <body>
     <section>
-      <div class="circle"></div>
+
       <header>
         <a href="index.html">
           <img src="img/logo.png" class="logo"">
@@ -92,7 +98,166 @@
           </li>
           </ul>
       </header>
+
+      <!-- Container for the image gallery -->
+<div class="container">
+
+    <!-- Full-width images with number text -->
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+        <img src="img/277181554_958536271515942_7069412179014306523_n.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+        <img src="img/277187482_732405944450312_1038204135531447064_n.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+        <img src="img/277216705_663146784989628_4544318476157742779_n.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+        <img src="img/277232676_927887797910462_1151842987301509817_n.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+        <img src="img/277312449_654109325895333_1941810496912340167_n.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+        <img src="img/277372032_955283738292896_6006537101953799856_n.jpg" style="width:100%">
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+    <!-- Image text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+  
+    <!-- Thumbnail images -->
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="img/277181554_958536271515942_7069412179014306523_n.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img/277187482_732405944450312_1038204135531447064_n.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img/277216705_663146784989628_4544318476157742779_n.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img/277232676_927887797910462_1151842987301509817_n.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img/277312449_654109325895333_1941810496912340167_n.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img/277372032_955283738292896_6006537101953799856_n.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+      </div>
+    </div>
+  </div>
+
     </section>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("demo");
+          let captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+        </script>
+<div class="container">
+  <div class="intro my-5">
+      <h2 class="text-center"><b>Products</b></h2>
+      <p class="text-center">MediTect is a website that informs users where the nearest, available, and most equipped clinic, health
+          center, and hospital is. 
+      <br>
+          This website allows its users to do the following:
+   </p>
+  </div>
+  <div class="row articles">
+      <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="images/meditect-contact/nearhosp.png"yy></a>
+          <h3 class="pt-3 name">Look for the nearest health facility in your area</h3>
+          <p class="description">Finds the nearest, available, and most equipped hospital, clinic or medical center based
+on your location</p>
+      </div>
+      <div
+          class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="images/meditect-contact/hospdet.png"></a>
+          <h3 class="pt-3 name">Know details about the health facility</h3>
+          <p class="description">Allows users to know the location of the hospital and how far is it
+              to their area, the contact information of the hospital, the services the hospitals offer, the working
+              hours of the hospital and, the appearance of the hospital.</p>
+      </div>
+      <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="images/meditect-contact/userstat.png"></a>
+      <h3 class="pt-3 name">Create an account</h3>
+      <p class="description">Allows users to tag themselves with what kind of sickness they are
+          feeling so that the app can find a facility that can adhere to those needs. </p>
+      </div>
+  </div>
+</div>
+</div>
+
+<div class="container">
+  <div class="intro my-5">
+      <h2 class="text-center"><b>Why YN MOTOR PARTS AND ACCESORIES</b></h2>
+      <p class="text-center">MediTect is a website that informs users where the nearest, available, and most equipped clinic, health
+          center, and hospital is. 
+      <br>
+          This website allows its users to do the following:
+   </p>
+  </div>
+  <div class="row articles">
+      <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="images/meditect-contact/nearhosp.png"yy></a>
+          <h3 class="pt-3 name">Look for the nearest health facility in your area</h3>
+          <p class="description">Finds the nearest, available, and most equipped hospital, clinic or medical center based
+on your location</p>
+      </div>
+      <div
+          class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="images/meditect-contact/hospdet.png"></a>
+          <h3 class="pt-3 name">Know details about the health facility</h3>
+          <p class="description">Allows users to know the location of the hospital and how far is it
+              to their area, the contact information of the hospital, the services the hospitals offer, the working
+              hours of the hospital and, the appearance of the hospital.</p>
+      </div>
+      <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="images/meditect-contact/userstat.png"></a>
+      <h3 class="pt-3 name">Create an account</h3>
+      <p class="description">Allows users to tag themselves with what kind of sickness they are
+          feeling so that the app can find a facility that can adhere to those needs. </p>
+      </div>
+  </div>
+</div>
+</div>
+
     <style>
       .content {
         position: relative;
